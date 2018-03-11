@@ -1,0 +1,6 @@
+|en
+clk => always0.IN0
+A[0] => always0.IN1
+A[1] => always0.IN1
+
+

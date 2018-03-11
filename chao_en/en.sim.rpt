@@ -1,0 +1,370 @@
+Simulator report for en
+Mon Jun 16 21:59:21 2014
+Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 10.0 ms      ;
+; Simulation Netlist Size     ; 77 nodes     ;
+; Simulation Coverage         ;      49.65 % ;
+; Total Number of Transitions ; 5576365      ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C6Q240C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Glitch Filtering                                                                           ; Off        ; Off           ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      49.65 % ;
+; Total nodes checked                                 ; 77           ;
+; Total output ports checked                          ; 143          ;
+; Total output ports with complete 1/0-value coverage ; 71           ;
+; Total output ports with no 1/0-value coverage       ; 70           ;
+; Total output ports with no 1-value coverage         ; 71           ;
+; Total output ports with no 0-value coverage         ; 71           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                  ;
++-------------------+-----------------------+------------------+
+; Node Name         ; Output Port Name      ; Output Port Type ;
++-------------------+-----------------------+------------------+
+; |en|count[15]     ; |en|count[15]         ; regout           ;
+; |en|Equal0~278    ; |en|Equal0~278        ; combout          ;
+; |en|Equal0~280    ; |en|Equal0~280        ; combout          ;
+; |en|count[5]      ; |en|count[5]          ; regout           ;
+; |en|count[4]      ; |en|count[4]          ; regout           ;
+; |en|LessThan1~327 ; |en|LessThan1~327     ; combout          ;
+; |en|LessThan1~327 ; |en|count[7]          ; regout           ;
+; |en|count[6]      ; |en|count[6]          ; regout           ;
+; |en|count[8]      ; |en|count[8]          ; regout           ;
+; |en|count[9]      ; |en|count[9]          ; regout           ;
+; |en|en_buf~309    ; |en|en_buf~309        ; combout          ;
+; |en|en_buf~309    ; |en|count[10]         ; regout           ;
+; |en|en_buf~310    ; |en|en_buf~310        ; combout          ;
+; |en|en_buf~311    ; |en|en_buf~311        ; combout          ;
+; |en|en_buf~311    ; |en|count[11]         ; regout           ;
+; |en|count[17]     ; |en|count[17]         ; regout           ;
+; |en|count[16]     ; |en|count[16]         ; regout           ;
+; |en|LessThan0~273 ; |en|LessThan0~273     ; combout          ;
+; |en|Equal0~281    ; |en|Equal0~281        ; combout          ;
+; |en|Equal0~281    ; |en|count[12]         ; regout           ;
+; |en|count[2]      ; |en|count[2]          ; regout           ;
+; |en|count[1]      ; |en|count[1]          ; regout           ;
+; |en|count[0]      ; |en|count[0]          ; regout           ;
+; |en|Equal0~282    ; |en|Equal0~282        ; combout          ;
+; |en|Equal0~282    ; |en|count[3]          ; regout           ;
+; |en|Equal0~283    ; |en|Equal0~283        ; combout          ;
+; |en|Equal0~283    ; |en|count[13]         ; regout           ;
+; |en|count[14]     ; |en|count[14]         ; regout           ;
+; |en|en_buf~313    ; |en|en_buf~313        ; combout          ;
+; |en|Equal0~285    ; |en|Equal0~285        ; combout          ;
+; |en|Add0~492      ; |en|Add0~492          ; combout          ;
+; |en|Add0~492      ; |en|Add0~493COUT1_567 ; cout1            ;
+; |en|Add0~512      ; |en|Add0~512          ; combout          ;
+; |en|Add0~512      ; |en|Add0~513          ; cout             ;
+; |en|Add0~522      ; |en|Add0~522          ; combout          ;
+; |en|Add0~522      ; |en|Add0~523COUT1_569 ; cout1            ;
+; |en|Add0~524      ; |en|Add0~524          ; combout          ;
+; |en|Add0~524      ; |en|Add0~525COUT1_568 ; cout1            ;
+; |en|Add0~526      ; |en|Add0~526          ; combout          ;
+; |en|Add0~526      ; |en|Add0~527          ; cout0            ;
+; |en|Add0~528      ; |en|Add0~528          ; combout          ;
+; |en|Add0~528      ; |en|Add0~529          ; cout             ;
+; |en|Add0~530      ; |en|Add0~530          ; combout          ;
+; |en|Add0~530      ; |en|Add0~531COUT1_562 ; cout1            ;
+; |en|Add0~532      ; |en|Add0~532          ; combout          ;
+; |en|Add0~532      ; |en|Add0~533          ; cout0            ;
+; |en|Add0~534      ; |en|Add0~534          ; combout          ;
+; |en|Add0~534      ; |en|Add0~535          ; cout             ;
+; |en|Add0~536      ; |en|Add0~536          ; combout          ;
+; |en|Add0~536      ; |en|Add0~537          ; cout0            ;
+; |en|Add0~538      ; |en|Add0~538          ; combout          ;
+; |en|Add0~538      ; |en|Add0~539          ; cout0            ;
+; |en|Add0~540      ; |en|Add0~540          ; combout          ;
+; |en|Add0~542      ; |en|Add0~542          ; combout          ;
+; |en|Add0~542      ; |en|Add0~543          ; cout0            ;
+; |en|Add0~544      ; |en|Add0~544          ; combout          ;
+; |en|Add0~544      ; |en|Add0~545          ; cout0            ;
+; |en|Add0~546      ; |en|Add0~546          ; combout          ;
+; |en|Add0~546      ; |en|Add0~547          ; cout0            ;
+; |en|Add0~548      ; |en|Add0~548          ; combout          ;
+; |en|Add0~548      ; |en|Add0~549COUT1_561 ; cout1            ;
+; |en|Add0~550      ; |en|Add0~550          ; combout          ;
+; |en|Add0~550      ; |en|Add0~551COUT1_560 ; cout1            ;
+; |en|Add0~552      ; |en|Add0~552          ; combout          ;
+; |en|Add0~552      ; |en|Add0~553COUT1_559 ; cout1            ;
+; |en|Add0~554      ; |en|Add0~554          ; combout          ;
+; |en|Add0~554      ; |en|Add0~555          ; cout             ;
+; |en|Add0~556      ; |en|Add0~556          ; combout          ;
+; |en|Add0~556      ; |en|Add0~557COUT1_570 ; cout1            ;
+; |en|clk           ; |en|clk               ; combout          ;
+; |en|en            ; |en|en                ; padio            ;
++-------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------+
+; Missing 1-Value Coverage                                  ;
++----------------+-----------------------+------------------+
+; Node Name      ; Output Port Name      ; Output Port Type ;
++----------------+-----------------------+------------------+
+; |en|count[31]  ; |en|count[31]         ; regout           ;
+; |en|count[30]  ; |en|count[30]         ; regout           ;
+; |en|count[29]  ; |en|count[29]         ; regout           ;
+; |en|Equal0~276 ; |en|Equal0~276        ; combout          ;
+; |en|Equal0~276 ; |en|count[32]         ; regout           ;
+; |en|count[23]  ; |en|count[23]         ; regout           ;
+; |en|count[22]  ; |en|count[22]         ; regout           ;
+; |en|count[21]  ; |en|count[21]         ; regout           ;
+; |en|Equal0~277 ; |en|Equal0~277        ; combout          ;
+; |en|Equal0~277 ; |en|count[24]         ; regout           ;
+; |en|count[28]  ; |en|count[28]         ; regout           ;
+; |en|count[27]  ; |en|count[27]         ; regout           ;
+; |en|Equal0~278 ; |en|count[20]         ; regout           ;
+; |en|count[25]  ; |en|count[25]         ; regout           ;
+; |en|Equal0~279 ; |en|Equal0~279        ; combout          ;
+; |en|Equal0~279 ; |en|count[26]         ; regout           ;
+; |en|count[19]  ; |en|count[19]         ; regout           ;
+; |en|en_buf~312 ; |en|en_buf~312        ; combout          ;
+; |en|Equal0~284 ; |en|Equal0~284        ; combout          ;
+; |en|Equal0~286 ; |en|Equal0~286        ; combout          ;
+; |en|Add0~492   ; |en|Add0~493          ; cout0            ;
+; |en|Add0~494   ; |en|Add0~494          ; combout          ;
+; |en|Add0~496   ; |en|Add0~496          ; combout          ;
+; |en|Add0~496   ; |en|Add0~497          ; cout0            ;
+; |en|Add0~496   ; |en|Add0~497COUT1_583 ; cout1            ;
+; |en|Add0~498   ; |en|Add0~498          ; combout          ;
+; |en|Add0~498   ; |en|Add0~499          ; cout             ;
+; |en|Add0~500   ; |en|Add0~500          ; combout          ;
+; |en|Add0~500   ; |en|Add0~501          ; cout0            ;
+; |en|Add0~500   ; |en|Add0~501COUT1_582 ; cout1            ;
+; |en|Add0~502   ; |en|Add0~502          ; combout          ;
+; |en|Add0~502   ; |en|Add0~503          ; cout0            ;
+; |en|Add0~502   ; |en|Add0~503COUT1_578 ; cout1            ;
+; |en|Add0~504   ; |en|Add0~504          ; combout          ;
+; |en|Add0~504   ; |en|Add0~505          ; cout0            ;
+; |en|Add0~504   ; |en|Add0~505COUT1_577 ; cout1            ;
+; |en|Add0~506   ; |en|Add0~506          ; combout          ;
+; |en|Add0~506   ; |en|Add0~507          ; cout0            ;
+; |en|Add0~506   ; |en|Add0~507COUT1_576 ; cout1            ;
+; |en|Add0~508   ; |en|Add0~508          ; combout          ;
+; |en|Add0~508   ; |en|Add0~509          ; cout0            ;
+; |en|Add0~508   ; |en|Add0~509COUT1_575 ; cout1            ;
+; |en|Add0~510   ; |en|Add0~510          ; combout          ;
+; |en|Add0~510   ; |en|Add0~511          ; cout             ;
+; |en|Add0~514   ; |en|Add0~514          ; combout          ;
+; |en|Add0~514   ; |en|Add0~515          ; cout0            ;
+; |en|Add0~514   ; |en|Add0~515COUT1_581 ; cout1            ;
+; |en|Add0~516   ; |en|Add0~516          ; combout          ;
+; |en|Add0~516   ; |en|Add0~517          ; cout0            ;
+; |en|Add0~516   ; |en|Add0~517COUT1_580 ; cout1            ;
+; |en|Add0~518   ; |en|Add0~518          ; combout          ;
+; |en|Add0~518   ; |en|Add0~519          ; cout0            ;
+; |en|Add0~518   ; |en|Add0~519COUT1_579 ; cout1            ;
+; |en|Add0~520   ; |en|Add0~520          ; combout          ;
+; |en|Add0~520   ; |en|Add0~521          ; cout             ;
+; |en|Add0~522   ; |en|Add0~523          ; cout0            ;
+; |en|Add0~524   ; |en|Add0~525          ; cout0            ;
+; |en|Add0~526   ; |en|Add0~527COUT1_564 ; cout1            ;
+; |en|Add0~530   ; |en|Add0~531          ; cout0            ;
+; |en|Add0~532   ; |en|Add0~533COUT1_563 ; cout1            ;
+; |en|Add0~536   ; |en|Add0~537COUT1_565 ; cout1            ;
+; |en|Add0~538   ; |en|Add0~539COUT1_566 ; cout1            ;
+; |en|Add0~540   ; |en|Add0~541          ; cout0            ;
+; |en|Add0~540   ; |en|Add0~541COUT1_574 ; cout1            ;
+; |en|Add0~542   ; |en|Add0~543COUT1_573 ; cout1            ;
+; |en|Add0~544   ; |en|Add0~545COUT1_572 ; cout1            ;
+; |en|Add0~546   ; |en|Add0~547COUT1_571 ; cout1            ;
+; |en|Add0~548   ; |en|Add0~549          ; cout0            ;
+; |en|Add0~550   ; |en|Add0~551          ; cout0            ;
+; |en|Add0~552   ; |en|Add0~553          ; cout0            ;
+; |en|Add0~556   ; |en|Add0~557          ; cout0            ;
++----------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------+
+; Missing 0-Value Coverage                                  ;
++----------------+-----------------------+------------------+
+; Node Name      ; Output Port Name      ; Output Port Type ;
++----------------+-----------------------+------------------+
+; |en|count[31]  ; |en|count[31]         ; regout           ;
+; |en|count[30]  ; |en|count[30]         ; regout           ;
+; |en|count[29]  ; |en|count[29]         ; regout           ;
+; |en|Equal0~276 ; |en|Equal0~276        ; combout          ;
+; |en|Equal0~276 ; |en|count[32]         ; regout           ;
+; |en|count[23]  ; |en|count[23]         ; regout           ;
+; |en|count[22]  ; |en|count[22]         ; regout           ;
+; |en|count[21]  ; |en|count[21]         ; regout           ;
+; |en|Equal0~277 ; |en|Equal0~277        ; combout          ;
+; |en|Equal0~277 ; |en|count[24]         ; regout           ;
+; |en|count[28]  ; |en|count[28]         ; regout           ;
+; |en|count[27]  ; |en|count[27]         ; regout           ;
+; |en|Equal0~278 ; |en|count[20]         ; regout           ;
+; |en|count[25]  ; |en|count[25]         ; regout           ;
+; |en|Equal0~279 ; |en|Equal0~279        ; combout          ;
+; |en|Equal0~279 ; |en|count[26]         ; regout           ;
+; |en|count[19]  ; |en|count[19]         ; regout           ;
+; |en|count[18]  ; |en|count[18]         ; regout           ;
+; |en|Equal0~284 ; |en|Equal0~284        ; combout          ;
+; |en|Equal0~286 ; |en|Equal0~286        ; combout          ;
+; |en|Add0~492   ; |en|Add0~493          ; cout0            ;
+; |en|Add0~494   ; |en|Add0~494          ; combout          ;
+; |en|Add0~496   ; |en|Add0~496          ; combout          ;
+; |en|Add0~496   ; |en|Add0~497          ; cout0            ;
+; |en|Add0~496   ; |en|Add0~497COUT1_583 ; cout1            ;
+; |en|Add0~498   ; |en|Add0~498          ; combout          ;
+; |en|Add0~498   ; |en|Add0~499          ; cout             ;
+; |en|Add0~500   ; |en|Add0~500          ; combout          ;
+; |en|Add0~500   ; |en|Add0~501          ; cout0            ;
+; |en|Add0~500   ; |en|Add0~501COUT1_582 ; cout1            ;
+; |en|Add0~502   ; |en|Add0~502          ; combout          ;
+; |en|Add0~502   ; |en|Add0~503          ; cout0            ;
+; |en|Add0~502   ; |en|Add0~503COUT1_578 ; cout1            ;
+; |en|Add0~504   ; |en|Add0~504          ; combout          ;
+; |en|Add0~504   ; |en|Add0~505          ; cout0            ;
+; |en|Add0~504   ; |en|Add0~505COUT1_577 ; cout1            ;
+; |en|Add0~506   ; |en|Add0~506          ; combout          ;
+; |en|Add0~506   ; |en|Add0~507          ; cout0            ;
+; |en|Add0~506   ; |en|Add0~507COUT1_576 ; cout1            ;
+; |en|Add0~508   ; |en|Add0~508          ; combout          ;
+; |en|Add0~508   ; |en|Add0~509          ; cout0            ;
+; |en|Add0~508   ; |en|Add0~509COUT1_575 ; cout1            ;
+; |en|Add0~510   ; |en|Add0~510          ; combout          ;
+; |en|Add0~510   ; |en|Add0~511          ; cout             ;
+; |en|Add0~514   ; |en|Add0~514          ; combout          ;
+; |en|Add0~514   ; |en|Add0~515          ; cout0            ;
+; |en|Add0~514   ; |en|Add0~515COUT1_581 ; cout1            ;
+; |en|Add0~516   ; |en|Add0~516          ; combout          ;
+; |en|Add0~516   ; |en|Add0~517          ; cout0            ;
+; |en|Add0~516   ; |en|Add0~517COUT1_580 ; cout1            ;
+; |en|Add0~518   ; |en|Add0~518          ; combout          ;
+; |en|Add0~518   ; |en|Add0~519          ; cout0            ;
+; |en|Add0~518   ; |en|Add0~519COUT1_579 ; cout1            ;
+; |en|Add0~520   ; |en|Add0~520          ; combout          ;
+; |en|Add0~520   ; |en|Add0~521          ; cout             ;
+; |en|Add0~522   ; |en|Add0~523          ; cout0            ;
+; |en|Add0~524   ; |en|Add0~525          ; cout0            ;
+; |en|Add0~526   ; |en|Add0~527COUT1_564 ; cout1            ;
+; |en|Add0~530   ; |en|Add0~531          ; cout0            ;
+; |en|Add0~532   ; |en|Add0~533COUT1_563 ; cout1            ;
+; |en|Add0~536   ; |en|Add0~537COUT1_565 ; cout1            ;
+; |en|Add0~538   ; |en|Add0~539COUT1_566 ; cout1            ;
+; |en|Add0~540   ; |en|Add0~541          ; cout0            ;
+; |en|Add0~540   ; |en|Add0~541COUT1_574 ; cout1            ;
+; |en|Add0~542   ; |en|Add0~543COUT1_573 ; cout1            ;
+; |en|Add0~544   ; |en|Add0~545COUT1_572 ; cout1            ;
+; |en|Add0~546   ; |en|Add0~547COUT1_571 ; cout1            ;
+; |en|Add0~548   ; |en|Add0~549          ; cout0            ;
+; |en|Add0~550   ; |en|Add0~551          ; cout0            ;
+; |en|Add0~552   ; |en|Add0~553          ; cout0            ;
+; |en|Add0~556   ; |en|Add0~557          ; cout0            ;
++----------------+-----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Full Version
+    Info: Processing started: Mon Jun 16 21:58:18 2014
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off en -c en
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      49.65 %
+Info: Number of transitions in simulation is 5576365
+Info: Vector file en.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Processing ended: Mon Jun 16 21:59:21 2014
+    Info: Elapsed time: 00:01:03
+
+

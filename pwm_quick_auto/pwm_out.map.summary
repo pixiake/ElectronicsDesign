@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Jun 24 14:56:33 2014
+Quartus II 64-Bit Version : 11.0 Build 208 07/03/2011 SP 1 SJ Full Version
+Revision Name : pwm_out
+Top-level Entity Name : pwm_quick_auto
+Family : Cyclone IV E
+Total logic elements : 16
+    Total combinational functions : 16
+    Dedicated logic registers : 15
+Total registers : 15
+Total pins : 2
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

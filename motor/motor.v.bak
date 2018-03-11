@@ -1,0 +1,33 @@
+module motor(clk,model_s,in,motor_out,model_o);
+
+input clk;
+input [1:0] model_s;
+input [5:0] in;
+output [5:0] motor_out;
+output 
+always@(posedge clk)
+begin
+   if(model_s == 2'b11)
+	   begin
+		      if(in == 6'b000001)
+		      motor <= 6'b001010;// 前进
+				else if(in == 6'b000010)
+				motor <= 6'b000101;// 后退
+				else if(in == 6'b000011)
+				motor <= 6'b001001;// 左转
+				else if(in == 6'b000100)
+				motor <= 6'b000110;// 右转
+				else if(in == 6'b000101)
+				motor <= 6'b010000;// 加速
+				else if(in == 6'b000110)
+				motor <= 6'b100000;// 减速
+				else motor <= 6'b000000;
+		end
+		else if(model_s == 2'b10)
+		      model_s <= 10；
+				else if (model_s == 01)
+				model_s <= 01;
+				else model_s <= 00;
+		      
+end
+endmodule

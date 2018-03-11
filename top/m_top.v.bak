@@ -1,0 +1,42 @@
+module  m_select(clk,m_s,motor_a,motor_b,pwm_a,pwm_b,led_a,led_b,mo_out,pwm_out,led_out);
+
+input clk;
+input [1:0]m_s;
+input [3:0]motor_a,motor_b;
+input [1:0]pwm_a,pwm_b;
+input led_a,led_b;
+
+output [3:0]mo_out;
+output [1:0]pwm_out;
+output led_out;
+
+reg [3:0]mo_out;   
+reg [1:0]pwm_out;
+reg led_out;
+
+always@(m_s[1] == 1 && m_s[0] == 0)
+
+begin
+
+	    mo_out[3:0] = motor_a[3:0];
+		 pwm_out[1:0] =  pwm_a[1:0];
+		 led_out = led_a;
+	 
+end                                   //人工控制
+
+always@(m_s[1] == 1 && m_s[0] == 1)	 
+  
+    begin
+	    mo_out[3:0] = motor_a[3:0];
+		 pwm_out[1:0] =  pwm_a[1:0];
+		 led_out = led_a;
+	 end                               //自动控制
+	 
+always@(m_s[1] == 0 && m_s[0] == 1)
+
+   begin
+	    mo_out[3:0] = 4'b0;
+		 pwm_out[1:0] =  2'b0;
+		 led_out = 1;
+	end
+endmodule

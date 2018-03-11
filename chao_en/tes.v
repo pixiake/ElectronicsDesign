@@ -1,0 +1,19 @@
+module  en(clk,en);
+
+input clk;
+output en;
+
+reg [32:0]count;
+reg en_buf;
+always@(posedge clk)
+begin
+   count <= count + 1'b1;
+	if(count == 1000000)
+	     count <= 0;
+	else if(count > 0 && count < 20000)
+	     en_buf <= 1;
+		 else en_buf <= 0;
+end
+
+assign en = en_buf;
+endmodule

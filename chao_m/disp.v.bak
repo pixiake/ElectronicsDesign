@@ -1,0 +1,79 @@
+module disp(clk,in,en,sel,data);
+
+input clk;
+input en;
+input [19:0]in;
+output [3:0]sel;
+output [7:0]data;
+
+
+reg [3:0]sel;
+reg [7:0]data;
+reg [19:0]in_buf;
+reg [3:0]data1,data2,data3,data4;
+reg [7:0] dis[9:0];
+reg s;
+
+initial
+begin
+dis[0] = 8'hc0;
+dis[1] = 8'hf9;
+dis[2] = 8'ha4;
+dis[3] = 8'hb0;
+dis[4] = 8'h99;
+dis[5] = 8'h92;
+dis[6] = 8'h82;
+dis[7] = 8'hf8;
+dis[8] = 8'h80;
+dis[9] = 8'h90;
+end
+
+always@(posedge clk)
+if(en == 1)
+begin
+    [19:0]in_buf <= [19:0]in
+end
+else  [19:0]in_buf <= 20'b0;
+
+always@(posedge clk)
+begin
+    data1 <= in_buf / 147  / 1000; 
+    data2 <= in_buf / 147  /1000 % 1000 / 100; 
+	 data3 <= in_buf / 147  /1000 % 1000 / 100 % 100 / 10; 
+	 data4 <=in_buf / 147  /1000 % 1000 / 100 % 100 / 10 % 10;  
+end
+
+always@(posedge clk)
+begin
+    if(s == 3)
+	   s <= 0;
+		else
+		  s <= s + 1;
+end
+
+always@(posedge clk)
+begin
+  case(sel)
+   2'b00  :   begin
+            data <= dis[data1];
+				sel <= 4'b1110;
+            end
+	2'b01  :   begin
+            data <= dis[data2];
+				sel <= 4'b1101;
+            end
+	2'b10   :  begin
+            data <= dis[data3];
+				sel <= 4'b1011;
+            end
+	2'b11   :  begin
+            data <= dis[data4];
+				sel <= 4'b0111;
+            end
+	default :     begin
+            data <= 8'b0;
+				sel <= 4'b1111;
+            end			
+end
+
+endmodule
